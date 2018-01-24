@@ -36,10 +36,10 @@ class ApplicationController < Sinatra::Base
 
   patch '/posts/:id' do
     @post = Post.find(params[:id])
-    binding.pry
+    # binding.pry
     @post.save
-    redirect to '/posts/:id'
-    erb :edit
+    # redirect to '/posts/:id'
+    erb :show
   end
 
 end
