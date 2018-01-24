@@ -38,6 +38,7 @@ class ApplicationController < Sinatra::Base
     @post = Post.find(params[:id])
     binding.pry
     @post.save
+    redirect to '/posts/:id'
     erb :edit
   end
 
