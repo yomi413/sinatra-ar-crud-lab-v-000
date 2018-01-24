@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-# Create 
+# Create
   get '/posts/new' do
     erb :new
   end
@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
     redirect to '/posts'
   end
 
-# Read 
+# Read
   get '/posts' do
     @posts = Post.all
     erb :index
